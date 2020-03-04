@@ -1,7 +1,9 @@
 import React from "react";
-import "./App.css";
+import "./styles/App.css";
 import Header from "./components/layout/Header";
 import BookList from "./components/BookList";
+import AddBookModal from "./components/AddBookModal";
+import AddBookButton from "./components/AddBookButton";
 
 class App extends React.Component {
   state = {
@@ -22,7 +24,28 @@ class App extends React.Component {
       },
       {
         id: 3,
-        title: "JavaScript/: The Good Parts",
+        title: "JavaScript : The Good Parts",
+        author: "Douglas Crockford",
+        pages: 153,
+        read: false
+      },
+      {
+        id: 4,
+        title: "JavaScript : The Good Parts",
+        author: "Douglas Crockford",
+        pages: 153,
+        read: false
+      },
+      {
+        id: 5,
+        title: "JavaScript : The Good Parts",
+        author: "Douglas Crockford",
+        pages: 153,
+        read: false
+      },
+      {
+        id: 6,
+        title: "JavaScript : The Good Parts",
         author: "Douglas Crockford",
         pages: 153,
         read: false
@@ -51,7 +74,8 @@ class App extends React.Component {
   getStyle = () => {
     return {
       display: "flex",
-      flexDirection: "row"
+      flexDirection: "row",
+      margin: "0 auto"
     };
   };
 
@@ -59,6 +83,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
+        <AddBookButton />
+        <AddBookModal />
         <div className="container">
           <React.Fragment>
             <BookList

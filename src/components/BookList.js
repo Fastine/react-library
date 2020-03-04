@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Book from "./Book";
 import PropTypes from "prop-types";
-import "../BookList.css";
+import "../styles/BookList.css";
 
 export default class BookList extends Component {
   render() {
