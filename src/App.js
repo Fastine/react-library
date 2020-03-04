@@ -41,11 +41,11 @@ class App extends React.Component {
     });
   };
 
-  delBook = (e, id) => {
+  delBook = id => {
+    console.log(id);
     this.setState({
       books: [...this.state.books.filter(book => book.id !== id)]
     });
-    e.stopPropagation();
   };
 
   getStyle = () => {
