@@ -17,6 +17,7 @@
   padding: 20px;
   border: 1px solid #888;
   width: 50%;
+  min-width: 250px;
   display: flex;
   flex-direction: column;
 }
@@ -31,15 +32,18 @@
 }
 
 /* Close button */
-.close {
+.modalClose {
   color: #aaa;
   float: right;
   font-size: 3rem;
   font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.close:hover,
-.close:focus {
+.modalClose:hover,
+.modalClose:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;

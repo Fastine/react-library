@@ -7,6 +7,7 @@ import AddBookButton from "./components/AddBookButton";
 
 class App extends React.Component {
   state = {
+    modalOpen: false,
     books: [
       {
         id: 1,
@@ -71,6 +72,29 @@ class App extends React.Component {
     });
   };
 
+  addBook = (id, title, author, pages, read) => {
+    let newBook = {
+      id,
+      title,
+      author,
+      pages,
+      read
+    };
+    this.setState({ books: [...this.state.books, newBook] });
+  };
+
+  openModal = e => {
+    this.setState({
+      modalOpen: true
+    });
+  };
+
+  closeModal = e => {
+    this.setState({
+      modalOpen: false
+    });
+  };
+
   getStyle = () => {
     return {
       display: "flex",
@@ -83,8 +107,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <AddBookButton />
-        <AddBookModal />
+        <AddBookButton openModal={this.openModal} />
+        <AddBookModal
+          modalOpen={this.state.modalOpen}
+          closeModal={this.closeModal}
+          addBook={this.addBook}
+        />
         <div className="container">
           <React.Fragment>
             <BookList
