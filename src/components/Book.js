@@ -5,13 +5,12 @@ export class Book extends Component {
   constructor(props) {
     super(props);
     this.props.delBook.bind(this);
-    this.state = {};
   }
 
   getStyle = () => {
     return {
       backgroundColor: this.props.book.read ? "lightgreen" : "LightCoral",
-      minWidth: "300px",
+      width: "300px",
       margin: "10px",
       cursor: "pointer",
       border: "1px black dotted",
@@ -26,6 +25,7 @@ export class Book extends Component {
         <p style={{ fontWeight: "bold" }}>
           {title}
           <button
+            className="noselect"
             onClick={e => {
               e.stopPropagation();
               this.props.delBook(id);

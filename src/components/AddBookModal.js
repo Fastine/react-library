@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../styles/AddBookModal.css";
+import "../styles/App.css";
 
 export default class AddBookModal extends Component {
   constructor(props) {
@@ -41,6 +42,7 @@ export default class AddBookModal extends Component {
           className="modalClose"
           onClick={e => {
             this.props.closeModal();
+            this.clearState();
           }}
         >
           &times;
@@ -70,9 +72,19 @@ export default class AddBookModal extends Component {
           ></input>
 
           <label htmlFor="read">Read?</label>
-          <input type="checkbox" name="read" value={this.state.read} />
+          <input
+            type="checkbox"
+            name="read"
+            value={this.state.read}
+            onChange={this.onChange}
+          />
 
-          <button type="submit" name="addBook" onClick={this.onSubmit}>
+          <button
+            className="btn"
+            type="submit"
+            name="addBook"
+            onClick={this.onSubmit}
+          >
             Add Book
           </button>
         </form>

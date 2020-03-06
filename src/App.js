@@ -32,23 +32,23 @@ class App extends React.Component {
       },
       {
         id: 4,
-        title: "JavaScript : The Good Parts",
-        author: "Douglas Crockford",
-        pages: 153,
+        title: "JavaScript : The Definitive ",
+        author: "David Flanagan",
+        pages: 1096,
         read: false
       },
       {
         id: 5,
-        title: "JavaScript : The Good Parts",
-        author: "Douglas Crockford",
-        pages: 153,
+        title: "JavaScript and JQuery : Interactive Front-End Web Development",
+        author: "Jon Duckett",
+        pages: 640,
         read: false
       },
       {
         id: 6,
-        title: "JavaScript : The Good Parts",
-        author: "Douglas Crockford",
-        pages: 153,
+        title: "HTML & CSS : Design and Build Websites",
+        author: "Jon Duckett",
+        pages: 490,
         read: false
       }
     ]
